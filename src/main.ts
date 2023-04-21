@@ -6,7 +6,7 @@ async function bootstrap() {
 
   const app = await NestFactory.create(AppModule);
   app.enableCors({
-    origin: ['https://frontend-ammo-varejo-challenge.vercel.app/'],
+    origin: ['https://frontend-ammo-varejo-challenge.vercel.app'],
     methods: 'GET',
     credentials: true,
   });
