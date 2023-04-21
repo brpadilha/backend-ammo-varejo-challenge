@@ -7,7 +7,10 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.enableCors({
     allowedHeaders: '*',
-    origin: '*',
+    origin: [
+      'http://localhost:5173',
+      'https://frontend-ammo-varejo-challenge.vercel.app',
+    ],
     credentials: true,
   });
   await app.listen(port);
