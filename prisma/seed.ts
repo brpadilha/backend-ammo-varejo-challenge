@@ -10,14 +10,14 @@ async function seedData() {
         price: parseInt(faker.commerce.price()),
         description: faker.commerce.productDescription(),
         promotionPrice: parseInt(faker.commerce.price()),
-        category: 'lencol_avulco',
+        category: 'lencol_avulso',
       },
     });
 
     for (let indexImages = 1; indexImages < 5; indexImages++) {
       await prisma.image.create({
         data: {
-          url: `/images/lencol_avulco_${indexImages}.jpg`,
+          url: `/images/lencol_avulso_${indexImages}.jpg`,
           productId: product.id,
         },
       });
