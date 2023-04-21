@@ -8,7 +8,6 @@ async function bootstrap() {
   app.enableCors({
     origin: ['https://frontend-ammo-varejo-challenge.vercel.app'],
     methods: 'GET',
-    credentials: true,
   });
   await app.listen(port);
 }
