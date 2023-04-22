@@ -11,7 +11,6 @@ async function bootstrap() {
       'http://localhost:5173',
       'https://frontend-ammo-varejo-challenge.vercel.app',
     ],
-    credentials: true,
   });
   await app.listen(port);
 }
