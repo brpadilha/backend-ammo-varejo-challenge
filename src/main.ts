@@ -5,13 +5,7 @@ async function bootstrap() {
   const port = process.env.PORT || 3000;
 
   const app = await NestFactory.create(AppModule);
-  app.enableCors({
-    allowedHeaders: '*',
-    origin: [
-      'http://localhost:5173',
-      'https://frontend-ammo-varejo-challenge.vercel.app',
-    ],
-  });
+  app.enableCors();
   await app.listen(port);
 }
 bootstrap();
